@@ -1,6 +1,7 @@
 {
-  "name": "blog",
-  "version": "0.1.1",
+  "name": "blogdev",
+  "version": "0.1.0",
+  "homepage": "https://lucascaixeta.github.io/lucascaixeta.com/blog",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
@@ -16,7 +17,6 @@
     "typescript": "^4.7.4",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://lucascaixeta.github.io/lucascaixeta.com/blog/build/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
