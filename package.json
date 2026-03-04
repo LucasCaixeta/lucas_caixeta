@@ -1,0 +1,30 @@
+{
+  "name": "lucascaixeta-portfolio",
+  "version": "2.0.0",
+  "description": "Personal portfolio website of Lucas Caixeta - Mobile & Web Developer",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch build/dev-server.js",
+    "build": "node build/build.js",
+    "test": "node --test src/*.test.js",
+    "test:watch": "node --watch --test src/*.test.js",
+    "format": "prettier --write \"src/**/*.{js,html,css,json,md}\" 2>/dev/null || echo 'Prettier not installed'",
+    "lint": "eslint src/**/*.js 2>/dev/null || echo 'ESLint not installed'"
+  },
+  "keywords": [
+    "portfolio",
+    "web developer",
+    "mobile developer",
+    "lucas caixeta",
+    "frontend"
+  ],
+  "author": "Lucas Caixeta",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "prettier": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

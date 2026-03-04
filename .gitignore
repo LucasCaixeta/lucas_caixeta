@@ -1,0 +1,37 @@
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDE and Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Build outputs
+dist/
+build/temp/
+*.tmp
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# OS specific
+Thumbs.db
+.Thumbs.db
+
+# Backups
+*.old
+*.backup
+*.bak
+
+# Old template files (archived for reference)
+assets/css/main.css.old
+assets/sass/

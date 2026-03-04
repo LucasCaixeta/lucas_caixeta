@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <!-- SEO and Social Media Meta Tags -->
+    <title>Lucas Caixeta - Mobile & Web Developer</title>
+    <meta name="description" content="Lucas Caixeta - Mobile & Web Developer specializing in modern web technologies and mobile applications." />
+    <meta name="keywords" content="web developer, mobile developer, frontend, javascript, react, lucas caixeta" />
+    <meta name="author" content="Lucas Caixeta" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.lucascaixeta.com/" />
+    <meta property="og:title" content="Lucas Caixeta - Mobile & Web Developer" />
+    <meta property="og:description" content="Mobile & Web Developer specializing in modern web technologies and mobile applications." />
+    <meta property="og:image" content="https://www.lucascaixeta.com/images/og-image.jpg" />
+    <meta property="og:site_name" content="Lucas Caixeta" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.lucascaixeta.com/" />
+    <meta property="twitter:title" content="Lucas Caixeta - Mobile & Web Developer" />
+    <meta property="twitter:description" content="Mobile & Web Developer specializing in modern web technologies and mobile applications." />
+    <meta property="twitter:image" content="https://www.lucascaixeta.com/images/og-image.jpg" />
+    <meta property="twitter:creator" content="@Lucas_Caixeta" />
+    
+    <!-- Favicon and PWA -->
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="./images/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#348cb2" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;900&display=swap" rel="stylesheet" />
+    </noscript>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/modern.css" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/css/main.css" as="style" />
+  </head>
+
+  <body class="loading">
+    <div id="wrapper">
+      <div id="bg" role="img" aria-label="Gradient background with animated pattern"></div>
+      <div id="overlay"></div>
+      <main id="main" role="main">
+        <!-- Header -->
+        <header id="header">
+          <h1>Lucas Caixeta</h1>
+          <p class="tagline">Mobile & Web Developer</p>
+          <nav role="navigation" aria-label="Social media links">
+            <ul class="social-links">
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/lucascaixeta"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="icon fa-linkedin"
+                  aria-label="LinkedIn Profile"
+                  title="Connect on LinkedIn"
+                >
+                  <span class="label">LinkedIn</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://twitter.com/Lucas_Caixeta"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="icon fa-twitter"
+                  aria-label="Twitter Profile"
+                  title="Follow on Twitter/X"
+                >
+                  <span class="label">Twitter</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/LucasCaixeta"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="icon fa-github"
+                  aria-label="GitHub Profile"
+                  title="View GitHub Projects"
+                >
+                  <span class="label">GitHub</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:contato@lucascaixeta.com"
+                  class="icon fa-envelope-o"
+                  aria-label="Email Contact"
+                  title="Send Email"
+                >
+                  <span class="label">Email</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Footer -->
+        <footer id="footer">
+          <p class="copyright">
+            <small>&copy; <span id="year"></span> Lucas Caixeta. All rights reserved.</small>
+          </p>
+        </footer>
+      </main>
+    </div>
+
+    <!-- Service Worker Registration and Core Scripts -->
+    <script>
+      // Critical path: Set year, remove loading, and register service worker
+      (function() {
+        // Set current year
+        const yearEl = document.getElementById('year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
+        
+        // Remove loading class when page is fully loaded
+        window.addEventListener('load', function() {
+          document.body.classList.remove('loading');
+        });
+
+        // Register Service Worker for PWA functionality
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+              .then(registration => {
+                console.log('Service Worker registered:', registration.scope);
+              })
+              .catch(error => {
+                console.log('Service Worker registration failed:', error);
+              });
+          });
+        }
+      })();
+    </script>
+
+    <!-- Progressive Enhancement: Touch and keyboard handling -->
+    <script>
+      // Handle touch events for better mobile experience
+      (function() {
+        let touchStartY = 0;
+        
+        document.addEventListener('touchstart', function(e) {
+          touchStartY = e.touches[0].clientY;
+        }, { passive: true });
+
+        document.addEventListener('touchmove', function(e) {
+          const touchEndY = e.touches[0].clientY;
+          const deltaY = touchStartY - touchEndY;
+          
+          // Prevent pull-to-refresh on iOS
+          if (deltaY < 0 && window.scrollY === 0) {
+            e.preventDefault();
+          }
+        }, { passive: false });
+
+        // Handle orientation change
+        window.addEventListener('orientationchange', function() {
+          window.scrollTo(0, 0);
+        });
+
+        // Add keyboard navigation support for accessibility
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Tab') {
+            document.body.classList.add('keyboard-navigation');
+          }
+        });
+
+        document.addEventListener('mousedown', function() {
+          document.body.classList.remove('keyboard-navigation');
+        });
+      })();
+    </script>
+
+    <!-- No-script fallback for accessibility -->
+    <noscript>
+      <style>
+        body.loading { display: block !important; opacity: 1 !important; }
+      </style>
+    </noscript>
+  </body>
+</html>
