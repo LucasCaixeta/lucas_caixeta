@@ -1,0 +1,57 @@
+// Misc.
+	$misc: (
+		bg:					#348cb2 url("images/bg.jpg") bottom left,
+		bg-width:			1500px,
+		border-radius:		4px,
+		box-shadow:			0 2px 10px rgba(0,0,0,0.1),
+		transition-speed:	0.2s
+	);
+
+// Duration.
+	$duration: (
+		bg:					60s,
+		wrapper:			3s,
+		overlay:			1.5s,
+		header:				1s,
+		nav-icons:			0.5s,
+		transition:			0.2s,
+		animation:			0.3s
+	);
+
+// Size.
+	$size: (
+		nav-icon-wrapper:	5.35em,
+		nav-icon:			1.75em,
+		border-width:		1px,
+		spacing-unit:		1rem,
+		max-width:			1200px
+	);
+
+// Font.
+	$font: (
+		family-primary:	'Source Sans Pro', sans-serif,
+		weight-light:		300,
+		weight-bold:		900,
+		line-height:		1.75,
+		letter-spacing:		-0.025em
+	);
+
+// Palette.
+	$palette: (
+		bg:					#fff,
+		fg:					#fff,
+		primary:			#348cb2,
+		secondary:			#2c7a9c,
+		accent:				#4da6d0,
+		text-primary:		#333,
+		text-secondary:		#666,
+		
+		nav-icon: (
+			hover-bg:		rgba(255,255,255,0.175),
+			hover-fg:		#fff,
+			active-bg:		rgba(255,255,255,0.35),
+			active-fg:		#fff,
+			focus-bg:		rgba(255,255,255,0.25),
+			focus-fg:		#fff
+		)
+	);

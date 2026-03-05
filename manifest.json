@@ -1,0 +1,67 @@
+{
+  "name": "Lucas Caixeta - Mobile & Web Developer",
+  "short_name": "Lucas Caixeta",
+  "description": "Personal portfolio website showcasing mobile and web development projects and expertise",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0a0e27",
+  "theme_color": "#348cb2",
+  "prefer_related_applications": false,
+  "categories": [
+    "portfolio",
+    "development",
+    "web",
+    "mobile"
+  ],
+  "screenshots": [
+    {
+      "src": "./images/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "./images/screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "icons": [
+    {
+      "src": "./images/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./images/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./images/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "View Projects",
+      "short_name": "Projects",
+      "description": "View my portfolio projects",
+      "url": "./",
+      "icons": [
+        {
+          "src": "./images/favicon.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}
+
