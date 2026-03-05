@@ -143,12 +143,13 @@
         // Register Service Worker for PWA functionality
         if ('serviceWorker' in navigator) {
           window.addEventListener('load', () => {
-            // Determine the correct path for service worker
-            const swPath = window.location.hostname === 'lucascaixeta.github.io' 
-              ? '/lucas_caixeta/sw.js' 
-              : '/sw.js';
+            // Determine the correct path and scope for service worker
+            const isGitHubPages = window.location.hostname === 'lucascaixeta.github.io';
+            const basePath = isGitHubPages ? '/lucas_caixeta' : '';
+            const swPath = basePath + '/sw.js';
+            const swScope = isGitHubPages ? '/lucas_caixeta/' : '/';
             
-            navigator.serviceWorker.register(swPath, { scope: '/' })
+            navigator.serviceWorker.register(swPath, { scope: swScope })
               .then(registration => {
                 console.log('Service Worker registered:', registration.scope);
                 
