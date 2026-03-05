@@ -226,8 +226,44 @@
           console.log('%cTip: Make sure the page has focus (click on it first)!', 'color: #f39c12; font-style: italic;');
         };
         
-        // Make konami function visible
-        console.log('%c💡 Try the konami() command!', 'color: #f39c12; font-weight: bold;');
+        // Console command: secret()
+        window.secret = function() {
+          console.clear();
+          console.log('%c🎉 SECRET UNLOCKED! 🎉', 'color: #5dade2; font-size: 28px; font-weight: bold; text-shadow: 2px 2px 0px rgba(0,0,0,0.3);');
+          console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #5dade2;');
+          console.log('');
+          console.log('%c🏆 Achievement Unlocked:', 'color: #f39c12; font-weight: bold; font-size: 16px;');
+          console.log('%c  "Console Explorer"', 'color: #aaa; font-style: italic;');
+          console.log('');
+          console.log('%cYou found the easy way! 😎', 'color: #ddd; font-size: 14px;');
+          console.log('');
+          console.log('%c📱 Let\'s connect:', 'color: #5dade2; font-weight: bold; font-size: 14px;');
+          console.log('');
+          console.log('%c🐦 Twitter: %chttps://twitter.com/Lucas_Caixeta', 'color: #ddd;', 'background: #1da1f2; color: white; padding: 8px 16px; border-radius: 4px; font-weight: bold;');
+          console.log('%c💻 GitHub: %chttps://github.com/LucasCaixeta', 'color: #ddd;', 'background: #333; color: white; padding: 8px 16px; border-radius: 4px; font-weight: bold;');
+          console.log('');
+          console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #5dade2;');
+          
+          // Visual effect
+          document.body.style.animation = 'pulse 1s ease-in-out 3';
+          const style = document.createElement('style');
+          style.textContent = `
+            @keyframes pulse {
+              0%, 100% { transform: scale(1); }
+              50% { transform: scale(1.02); }
+            }
+          `;
+          document.head.appendChild(style);
+          
+          setTimeout(() => {
+            document.body.style.animation = '';
+          }, 3000);
+        };
+        
+        // Make functions visible
+        console.log('%c💡 Try these commands:', 'color: #f39c12; font-weight: bold;');
+        console.log('%c  • %csecret()%c - Easy easter egg!', 'color: #ddd;', 'background: #2c3e50; color: #5dade2; padding: 2px 6px; border-radius: 3px; font-family: monospace;', 'color: #ddd;');
+        console.log('%c  • %ckonami()%c - For the Konami code hint', 'color: #ddd;', 'background: #2c3e50; color: #5dade2; padding: 2px 6px; border-radius: 3px; font-family: monospace;', 'color: #ddd;');
       })();
     </script>
 
