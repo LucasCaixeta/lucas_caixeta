@@ -126,6 +126,7 @@ a:hover {
   position: relative;
   width: 100%;
   height: 100vh;
+  animation: wrapperFade 3s forwards;
 }
 
 #bg {
@@ -135,10 +136,14 @@ a:hover {
   width: 100%;
   height: 100%;
   background-image: url('../css/images/bg.jpg');
-  background-size: cover;
-  background-position: center;
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  background-position: left center;
   background-attachment: fixed;
   z-index: 0;
+  animation: bgScroll 60s linear infinite;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
 }
 
 #overlay {
@@ -150,6 +155,8 @@ a:hover {
   background: linear-gradient(135deg, rgba(10, 14, 39, 0.85) 0%, rgba(21, 29, 58, 0.9) 100%);
   mix-blend-mode: overlay;
   z-index: 1;
+  animation: overlayFadeIn 1.5s 1.5s forwards;
+  opacity: 0;
 }
 
 #main {
@@ -170,6 +177,10 @@ header#header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  animation: headerSlideIn 1s 2.25s forwards;
+  opacity: 0;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
 }
 
 header#header h1 {
@@ -178,13 +189,16 @@ header#header h1 {
   color: var(--text-color);
   font-weight: 900;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  letter-spacing: -0.035em;
+  line-height: 1em;
 }
 
 header#header p {
   font-size: 1.5rem;
   color: var(--primary-light);
-  margin: 0 0 calc(var(--spacing-unit) * 2) 0;
+  margin: 0.75em 0 calc(var(--spacing-unit) * 2) 0;
   font-weight: 300;
+  opacity: 0.75;
 }
 
 /* == Navigation ================================================ */
@@ -208,6 +222,26 @@ navigation[role="navigation"] {
 
 .social-links li {
   display: inline-block;
+  animation: navIconsSlide 0.5s ease-in-out forwards;
+  opacity: 0;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+.social-links li:nth-child(1) {
+  animation-delay: 2.5s;
+}
+
+.social-links li:nth-child(2) {
+  animation-delay: 2.75s;
+}
+
+.social-links li:nth-child(3) {
+  animation-delay: 3s;
+}
+
+.social-links li:nth-child(4) {
+  animation-delay: 3.25s;
 }
 
 .social-links a {
@@ -218,18 +252,24 @@ navigation[role="navigation"] {
   height: 3rem;
   border: 2px solid var(--primary-light);
   border-radius: 50%;
-  transition: all var(--transition-speed) ease-in-out;
+  transition: all 0.2s ease-in-out;
   position: relative;
   font-size: 1.5rem;
   cursor: pointer;
+  background-color: transparent;
+  color: var(--primary-light);
 }
 
 .social-links a:hover {
   background-color: var(--primary-light);
   color: var(--bg-color);
   border-color: var(--primary-light);
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(74, 158, 212, 0.3);
+  transform: translateY(-8px) scale(1.1);
+  box-shadow: 0 10px 30px rgba(74, 158, 212, 0.4), 0 0 20px rgba(74, 158, 212, 0.2);
+}
+
+.social-links a:active {
+  transform: translateY(-4px) scale(0.98);
 }
 
 .social-links a .label {
