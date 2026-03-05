@@ -51,22 +51,10 @@
   ],
   "shortcuts": [
     {
-      "name": "View GitHub",
-      "short_name": "GitHub",
-      "description": "Visit my GitHub profile",
-      "url": "https://github.com/LucasCaixeta",
-      "icons": [
-        {
-          "src": "/images/favicon.png",
-          "sizes": "192x192"
-        }
-      ]
-    },
-    {
-      "name": "Contact via Email",
-      "short_name": "Email",
-      "description": "Send me an email",
-      "url": "mailto:contato@lucascaixeta.com",
+      "name": "View Projects",
+      "short_name": "Projects",
+      "description": "View my portfolio projects",
+      "url": "./",
       "icons": [
         {
           "src": "/images/favicon.png",
@@ -74,16 +62,6 @@
         }
       ]
     }
-  ],
-  "share_target": {
-    "action": "/share",
-    "method": "POST",
-    "enctype": "application/x-www-form-urlencoded",
-    "params": {
-      "title": "title",
-      "text": "text",
-      "url": "url"
-    }
-  }
+  ]
 }
 
