@@ -10,22 +10,25 @@ const CACHE_NAME = `lucas-caixeta-v${CACHE_VERSION}`;
 const RUNTIME_CACHE = `${CACHE_NAME}-runtime`;
 const IMAGE_CACHE = `${CACHE_NAME}-images`;
 
+// Determine base path for GitHub Pages or local
+const BASE_PATH = self.location.hostname === 'lucascaixeta.github.io' ? '/lucas_caixeta' : '';
+
 // Critical resources to cache on install
 const CRITICAL_ASSETS = [
-  '/',
-  '/index.html',
-  '/assets/css/main.css',
-  '/assets/css/modern.css',
-  '/assets/fonts/FontAwesome.otf',
-  '/images/favicon.png'
+  `${BASE_PATH}/`,
+  `${BASE_PATH}/index.html`,
+  `${BASE_PATH}/assets/css/main.css`,
+  `${BASE_PATH}/assets/css/modern.css`,
+  `${BASE_PATH}/assets/fonts/FontAwesome.otf`,
+  `${BASE_PATH}/images/favicon.png`
 ];
 
 // Static assets that should be cached
 const STATIC_ASSETS = [
-  '/manifest.json',
-  '/assets/fonts/fontawesome-webfont.woff2',
-  '/assets/fonts/fontawesome-webfont.woff',
-  '/assets/fonts/fontawesome-webfont.ttf'
+  `${BASE_PATH}/manifest.json`,
+  `${BASE_PATH}/assets/fonts/fontawesome-webfont.woff2`,
+  `${BASE_PATH}/assets/fonts/fontawesome-webfont.woff`,
+  `${BASE_PATH}/assets/fonts/fontawesome-webfont.ttf`
 ];
 
 // Initialize all caches

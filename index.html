@@ -33,7 +33,7 @@
     <!-- Favicon and PWA -->
     <link rel="icon" href="./images/favicon.png" type="image/x-icon" />
     <link rel="apple-touch-icon" href="./images/apple-touch-icon.png" />
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="manifest" href="./manifest.json" />
     <meta name="theme-color" content="#348cb2" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -143,12 +143,29 @@
         // Register Service Worker for PWA functionality
         if ('serviceWorker' in navigator) {
           window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/sw.js')
+            // Determine the correct path for service worker
+            const swPath = window.location.hostname === 'lucascaixeta.github.io' 
+              ? '/lucas_caixeta/sw.js' 
+              : '/sw.js';
+            
+            navigator.serviceWorker.register(swPath, { scope: '/' })
               .then(registration => {
                 console.log('Service Worker registered:', registration.scope);
+                
+                // Check for updates
+                registration.addEventListener('updatefound', () => {
+                  const newWorker = registration.installing;
+                  console.log('Service Worker update found');
+                  
+                  newWorker.addEventListener('statechange', () => {
+                    if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                      console.log('New Service Worker available. Refresh to update.');
+                    }
+                  });
+                });
               })
               .catch(error => {
-                console.log('Service Worker registration failed:', error);
+                console.warn('Service Worker registration failed:', error);
               });
           });
         }
