@@ -50,12 +50,17 @@
       <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;900&display=swap" rel="stylesheet" />
     </noscript>
     
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/modern.css" />
-    
     <!-- Preload critical resources -->
     <link rel="preload" href="assets/css/main.css" as="style" />
+    <link rel="preload" href="assets/css/modern.css" as="style" />
+    
+    <!-- Stylesheets with async loading -->
+    <link rel="stylesheet" href="assets/css/main.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="assets/css/modern.css" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="assets/css/main.css" />
+      <link rel="stylesheet" href="assets/css/modern.css" />
+    </noscript>
   </head>
 
   <body class="loading">
