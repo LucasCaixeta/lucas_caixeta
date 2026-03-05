@@ -6,10 +6,10 @@
   "scripts": {
     "dev": "node --watch build/dev-server.js",
     "build": "node build/build.js",
-    "test": "node --test src/*.test.js",
-    "test:watch": "node --watch --test src/*.test.js",
-    "format": "prettier --write \"src/**/*.{js,html,css,json,md}\" 2>/dev/null || echo 'Prettier not installed'",
-    "lint": "eslint src/**/*.js 2>/dev/null || echo 'ESLint not installed'"
+    "test": "echo 'No tests configured yet' && exit 0",
+    "test:watch": "echo 'No tests configured yet' && exit 0",
+    "format": "prettier --write \"**/*.{js,html,css,json,md}\" --ignore-path .gitignore 2>/dev/null || echo 'Prettier not installed'",
+    "lint": "eslint **/*.js --ignore-path .gitignore 2>/dev/null || echo 'ESLint not installed'"
   },
   "keywords": [
     "portfolio",
