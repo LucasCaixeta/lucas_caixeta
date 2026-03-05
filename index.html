@@ -143,15 +143,15 @@
       // Console Easter Egg
       (function() {
         const styles = {
-          title: 'color: #348cb2; font-size: 24px; font-weight: bold; text-shadow: 2px 2px 0px rgba(0,0,0,0.2);',
-          subtitle: 'color: #666; font-size: 14px; font-style: italic;',
-          message: 'color: #333; font-size: 12px; line-height: 1.5;',
-          highlight: 'color: #348cb2; font-weight: bold;',
-          code: 'background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: monospace;'
+          title: 'color: #5dade2; font-size: 24px; font-weight: bold; text-shadow: 2px 2px 0px rgba(0,0,0,0.3);',
+          subtitle: 'color: #aaa; font-size: 14px; font-style: italic;',
+          message: 'color: #ddd; font-size: 12px; line-height: 1.5;',
+          highlight: 'color: #5dade2; font-weight: bold; font-size: 14px;',
+          code: 'background: #2c3e50; color: #5dade2; padding: 2px 6px; border-radius: 3px; font-family: monospace;'
         };
 
         console.log('%c👋 Hello, Fellow Developer!', styles.title);
-        console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #348cb2;');
+        console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #5dade2;');
         console.log('%cYou found the secret message! 🎉', styles.subtitle);
         console.log('');
         console.log('%cI see you\'re curious about how this site works.', styles.message);
@@ -173,12 +173,8 @@
         console.log('%c  • Animated gradient background', styles.message);
         console.log('%c  • Smooth transitions and hover effects', styles.message);
         console.log('');
-        console.log('%c💼 Want to work together?', styles.highlight);
-        console.log('%c  Email: %ccontato@lucascaixeta.com', styles.message, styles.code);
-        console.log('%c  GitHub: %chttps://github.com/LucasCaixeta', styles.message, styles.code);
-        console.log('');
-        console.log('%c🎁 Pro tip: Try typing %ckonami%c in the console!', styles.message, styles.code, styles.message);
-        console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #348cb2;');
+        console.log('%c🎁 Pro tip: Try typing %ckonami()%c in the console!', styles.message, styles.code, styles.message);
+        console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #5dade2;');
         
         // Konami Code Easter Egg
         let konamiCode = [];
@@ -190,18 +186,19 @@
           
           if (konamiCode.join(',') === konamiSequence.join(',')) {
             console.clear();
-            console.log('%c🎮 KONAMI CODE ACTIVATED! 🎮', 'color: #ff0000; font-size: 32px; font-weight: bold; text-shadow: 3px 3px 0px rgba(0,0,0,0.3);');
-            console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #ff0000;');
-            console.log('%cYou unlocked the secret developer mode! 🔓', 'color: #333; font-size: 16px;');
+            console.log('%c🎮 KONAMI CODE ACTIVATED! 🎮', 'color: #ff6b6b; font-size: 32px; font-weight: bold; text-shadow: 3px 3px 0px rgba(0,0,0,0.3);');
+            console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #ff6b6b;');
+            console.log('%cYou unlocked the secret developer mode! 🔓', 'color: #ddd; font-size: 16px;');
             console.log('');
-            console.log('%c🎯 Achievement Unlocked:', 'color: #348cb2; font-weight: bold;');
-            console.log('%c  "Master of the Console"', 'color: #666; font-style: italic;');
+            console.log('%c🎯 Achievement Unlocked:', 'color: #5dade2; font-weight: bold;');
+            console.log('%c  "Master of the Console"', 'color: #aaa; font-style: italic;');
             console.log('');
-            console.log('%cYou\'re clearly a developer of culture! 🎩', 'color: #333;');
-            console.log('%cLet\'s connect and build something amazing together!', 'color: #333;');
+            console.log('%cYou\'re clearly a developer of culture! 🎩', 'color: #ddd;');
+            console.log('%cLet\'s connect and build something amazing together!', 'color: #ddd;');
             console.log('');
-            console.log('%c📧 contato@lucascaixeta.com', 'background: #348cb2; color: white; padding: 8px 16px; border-radius: 4px; font-weight: bold;');
-            console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #ff0000;');
+            console.log('%c🐦 Twitter: %chttps://twitter.com/Lucas_Caixeta', 'color: #ddd;', 'background: #1da1f2; color: white; padding: 8px 16px; border-radius: 4px; font-weight: bold;');
+            console.log('%c💻 GitHub: %chttps://github.com/LucasCaixeta', 'color: #ddd;', 'background: #333; color: white; padding: 8px 16px; border-radius: 4px; font-weight: bold;');
+            console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #ff6b6b;');
             
             // Visual effect
             document.body.style.animation = 'rainbow 2s linear infinite';
@@ -222,10 +219,15 @@
         
         // Console command: konami()
         window.konami = function() {
-          console.log('%c🎮 Konami Code Hint:', 'color: #348cb2; font-weight: bold;');
-          console.log('%c↑ ↑ ↓ ↓ ← → ← → B A', 'font-size: 20px; font-family: monospace;');
-          console.log('%cUse your arrow keys and then press B and A!', 'color: #666;');
+          console.log('%c🎮 Konami Code Hint:', 'color: #5dade2; font-weight: bold; font-size: 16px;');
+          console.log('%c↑ ↑ ↓ ↓ ← → ← → B A', 'color: #ff6b6b; font-size: 20px; font-family: monospace; font-weight: bold;');
+          console.log('%cUse your arrow keys and then press B and A!', 'color: #aaa;');
+          console.log('');
+          console.log('%cTip: Make sure the page has focus (click on it first)!', 'color: #f39c12; font-style: italic;');
         };
+        
+        // Make konami function visible
+        console.log('%c💡 Try the konami() command!', 'color: #f39c12; font-weight: bold;');
       })();
     </script>
 
