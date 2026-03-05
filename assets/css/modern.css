@@ -74,20 +74,10 @@ html {
 /* Continuous background parallax animation */
 @keyframes bgScroll {
   0% {
-    transform: translate3d(0, 0, 0);
+    background-position: 0 center;
   }
   100% {
-    transform: translate3d(-2250px, 0, 0);
-  }
-}
-
-/* Background animation */
-@keyframes bgShift {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(-2250px, 0, 0);
+    background-position: -2250px center;
   }
 }
 
