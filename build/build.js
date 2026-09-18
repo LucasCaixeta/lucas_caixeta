@@ -42,8 +42,8 @@ function copyDir(src, dest) {
 }
 
 // Copy necessary files
-const filesToCopy = ['index.html', 'manifest.json', 'sw.js', 'CNAME', '.well-known'];
-const dirsToCopy = ['assets', 'images', 'public'];
+const filesToCopy = ['index.html', 'style.css', 'sw.js', 'CNAME', '.well-known'];
+const dirsToCopy = ['images', 'pt'];
 
 filesToCopy.forEach(file => {
   const src = path.join(ROOT, file);

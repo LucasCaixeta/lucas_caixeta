@@ -38,9 +38,9 @@ const server = http.createServer((req, res) => {
   const parsedUrl = url.parse(req.url, true);
   let pathname = parsedUrl.pathname;
 
-  // Default to index.html for root
-  if (pathname === '/') {
-    pathname = '/index.html';
+  // Serve index.html for / and for folder URLs like /pt/
+  if (pathname.endsWith('/')) {
+    pathname += 'index.html';
   }
 
   // Construct the file path
