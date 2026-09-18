@@ -87,7 +87,7 @@ section { padding-block: clamp(3.5rem, 8vw, 6rem) }
 .hud .r4 { stroke-width: 6; stroke-dasharray: 1.4 12.6; stroke: var(--line) }
 .hud .mk-l, .hud .mk-c { stroke-width: 3.4 }
 @keyframes spin { to { transform: rotate(360deg) } }
-@media (max-width: 44rem) { .hud { right: 0; top: 3.75rem; width: 100vw; opacity: .16 } }
+@media (max-width: 44rem) { .hud { right: -32vw; top: 2.5rem; width: 100vw; opacity: .16 } }
 
 .status {
   display: inline-flex; align-items: center; gap: .6rem; margin-bottom: 1.75rem; padding: .4rem .9rem .4rem .75rem;
