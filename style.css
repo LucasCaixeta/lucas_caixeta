@@ -3,6 +3,7 @@
   --bg: light-dark(#f2f5f7, #06080b);
   --panel: light-dark(rgb(255 255 255 / .82), rgb(255 255 255 / .035));
   --line: light-dark(rgb(15 23 42 / .1), rgb(255 255 255 / .09));
+  --line-strong: light-dark(rgb(15 23 42 / .32), rgb(255 255 255 / .24));
   --edge: light-dark(rgb(255 255 255 / .9), rgb(255 255 255 / .06));
   --text: light-dark(#0a1220, #e9edf2);
   --muted: light-dark(#4b586d, #8b96a7);
@@ -44,7 +45,7 @@ h1, h2, h3 { margin: 0; font-family: var(--display); font-weight: 600 }
 .wrap { width: min(100% - 2 * var(--gutter), 66rem); margin-inline: auto }
 section { padding-block: clamp(3.5rem, 8vw, 6rem) }
 .skip { position: absolute; left: -999px }
-.skip:focus { left: 1rem; top: 1rem; z-index: 10; background: var(--bg); padding: .5rem 1rem; border: 1px solid var(--line); border-radius: 8px }
+.skip:focus { left: 1rem; top: 1rem; z-index: 10; background: var(--bg); padding: .8rem 1.1rem; border: 1px solid var(--line); border-radius: 8px }
 
 /* header */
 .bar {
@@ -67,15 +68,34 @@ section { padding-block: clamp(3.5rem, 8vw, 6rem) }
 .bar nav a:hover { color: var(--text) }
 .bar nav .cta-nav { color: var(--accent); border: 1px solid color-mix(in oklab, var(--accent) 45%, transparent); border-radius: 10px; padding: .4rem .9rem; font-weight: 500 }
 .bar nav .cta-nav:hover { color: var(--on-accent); background: var(--accent); border-color: var(--accent) }
-.bar nav .lang { font: 500 .72rem var(--mono); letter-spacing: .06em; color: var(--text); border: 1px solid var(--line); border-radius: 8px; padding: .3rem .5rem }
+.bar nav .lang { font: 500 .78rem var(--mono); letter-spacing: .06em; color: var(--text); border: 1px solid var(--line-strong); border-radius: 8px; display: inline-flex; align-items: center; height: 2rem; padding: 0 .6rem }
 .bar nav .lang:hover { border-color: var(--muted) }
-.bar nav .theme { display: inline-grid; place-items: center; width: 1.6rem; height: 1.6rem; padding: 0; margin-left: -1.1rem; border: 1px solid var(--line); border-radius: 8px; background: none; color: var(--text); cursor: pointer; transition: border-color .15s }
+.bar nav .theme { display: inline-grid; place-items: center; width: 2rem; height: 2rem; padding: 0; margin-left: -1.1rem; border: 1px solid var(--line-strong); border-radius: 8px; background: none; color: var(--text); cursor: pointer; transition: border-color .15s }
 .bar nav .theme:hover { border-color: var(--muted) }
 .theme svg { grid-area: 1 / 1; width: 1.05rem; height: 1.05rem; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round }
 .theme .sun { stroke: light-dark(transparent, currentColor) }
 .theme .moon { stroke: light-dark(currentColor, transparent) }
+.logo, .bar nav .opt, .bar nav .lang, .bar nav .theme, .bar nav .cta-nav, .menu-btn { position: relative }
+.logo::after, .bar nav .lang::after, .bar nav .theme::after, .bar nav .cta-nav::after, .menu-btn::after { content: ""; position: absolute; inset: -.6rem -.2rem }
+.bar nav .opt::after { content: ""; position: absolute; inset: -.6rem -.5rem }
+.bar nav .opt[aria-current="true"] { color: var(--text); text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: .5em }
+
+/* mobile menu */
+.menu-btn { display: none; place-items: center; width: 2rem; height: 2rem; padding: 0; border: 1px solid var(--line-strong); border-radius: 8px; background: none; color: var(--text); cursor: pointer }
+.menu-btn svg { width: 1.15rem; height: 1.15rem; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round }
+.menu-btn .ic-close, .menu-btn[aria-expanded="true"] .ic-open { display: none }
+.menu-btn[aria-expanded="true"] .ic-close { display: block }
+.menu { position: absolute; top: 100%; left: 0; right: 0; padding: .4rem var(--gutter) 1rem; background: var(--bg); border-bottom: 1px solid var(--line-strong); box-shadow: 0 24px 40px -24px rgb(0 0 0 / .45) }
+.menu[hidden] { display: none }
+.bar nav .menu a { display: flex; align-items: center; gap: 1rem; min-height: 3.1rem; color: var(--text); font: 500 1.05rem var(--display); letter-spacing: -.01em }
+.bar nav .menu a + a { border-top: 1px solid var(--line) }
+.bar nav .menu a span { font: 500 .8rem var(--mono); color: var(--accent); letter-spacing: .06em }
+.bar nav .menu a[aria-current="true"] { color: var(--accent); text-decoration: none }
+.bar nav .menu a::after { content: none }
+@media (max-width: 44rem) { .menu-btn { display: inline-grid } .bar nav .cta-nav { padding-block: .35rem } }
+@media (min-width: 44.01rem) { .menu { display: none !important } }
 @media (max-width: 44rem) { .bar nav { gap: .8rem } .bar nav .theme { margin-left: -.3rem } .bar nav .opt { display: none } }
-@media (max-width: 25rem) { .logo span { display: none } }
+@media (max-width: 30.5rem) { .logo span { display: none } }
 
 /* hero */
 .hero { padding-block: 2rem clamp(2.5rem, 6vw, 4rem) }
@@ -91,7 +111,7 @@ section { padding-block: clamp(3.5rem, 8vw, 6rem) }
 
 .status {
   display: inline-flex; align-items: center; gap: .6rem; margin-bottom: 1.75rem; padding: .4rem .9rem .4rem .75rem;
-  font: 500 .76rem var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted);
+  font: 500 .8rem var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted);
   border: 1px solid var(--line); border-radius: 99px; background: var(--panel);
 }
 .status i { width: .5rem; height: .5rem; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 0 var(--glow); animation: ping 2.6s ease-out infinite }
@@ -101,7 +121,7 @@ h1 span { display: block; color: var(--muted) }
 .intro { font-size: clamp(1.2rem, 2.3vw, 1.6rem); line-height: 1.42; letter-spacing: -.015em; max-width: 31em; text-wrap: pretty }
 .cta { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 2.25rem }
 .btn {
-  display: inline-block; padding: .8rem 1.3rem; border: 1px solid var(--line); border-radius: 12px; background: var(--panel);
+  display: inline-block; padding: .85rem 1.3rem; border: 1px solid var(--line-strong); border-radius: 12px; background: var(--panel);
   text-decoration: none; font-weight: 500; font-size: .96rem; transition: border-color .2s, box-shadow .2s, transform .2s;
 }
 .btn:hover { border-color: color-mix(in oklab, var(--accent) 55%, transparent); transform: translateY(-1px) }
@@ -124,7 +144,7 @@ h1 span { display: block; color: var(--muted) }
 .facts dt { font: 600 clamp(2rem, 6vw, 3.25rem)/1 var(--display); letter-spacing: -.04em }
 .facts dt b { color: var(--accent); font-weight: 600 }
 .facts dd { margin: .6rem 0 0; color: var(--muted); font-size: .9rem; line-height: 1.4 }
-@media (max-width: 36rem) { .facts { gap: .6rem } .facts .panel { padding: 1rem .9rem } .facts dd { font-size: .76rem } }
+@media (max-width: 36rem) { .facts { gap: .6rem } .facts .panel { padding: 1rem .9rem } .facts dd { font-size: .78rem } }
 
 /* section headings */
 .head { display: flex; align-items: baseline; gap: 1rem; margin-bottom: clamp(1.75rem, 4vw, 2.75rem) }
@@ -154,7 +174,7 @@ h2 { font-size: clamp(1.9rem, 5vw, 3rem); line-height: 1.05; letter-spacing: -.0
 .org { color: var(--accent); font-weight: 500; margin: .15rem 0 .8rem; font-size: .98rem }
 .job p:not(.when):not(.org) { color: var(--muted); max-width: 62ch }
 .chips { list-style: none; margin: 1.1rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: .4rem }
-.chips li { font: 400 .76rem var(--mono); color: var(--text); padding: .25rem .65rem; border: 1px solid var(--line); border-radius: 8px; background: color-mix(in oklab, var(--text) 4%, transparent) }
+.chips li { font: 400 .8rem var(--mono); color: var(--text); padding: .25rem .65rem; border: 1px solid var(--line); border-radius: 8px; background: color-mix(in oklab, var(--text) 4%, transparent) }
 @media (max-width: 40rem) { .tl { padding-left: 1.1rem } .tl > li::before { left: calc(-1.1rem - 4px) } .job { padding: 1.35rem 1.25rem } }
 
 .group { padding: 1.5rem 1.6rem }
@@ -169,9 +189,13 @@ h2 { font-size: clamp(1.9rem, 5vw, 3rem); line-height: 1.05; letter-spacing: -.0
 /* contact */
 .contact { padding: clamp(2rem, 6vw, 3.5rem) clamp(1.5rem, 5vw, 3.5rem) }
 .contact .intro { max-width: 20em }
-.mail { display: inline-block; margin-top: 1.5rem; font: 600 clamp(1.35rem, 5.4vw, 3rem)/1.1 var(--display); letter-spacing: -.04em; overflow-wrap: anywhere; color: var(--accent); text-decoration-thickness: 2px }
-.links { list-style: none; margin: 1.75rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: .6rem }
-.links a { display: inline-block; padding: .5rem 1rem; border: 1px solid var(--line); border-radius: 10px; text-decoration: none; font-size: .95rem; transition: border-color .2s }
+.contact-row { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem 1rem; margin-top: 1.25rem }
+.mail { display: inline-block; padding-block: .65rem; font: 600 clamp(1.35rem, 5.4vw, 3rem)/1.1 var(--display); letter-spacing: -.04em; overflow-wrap: anywhere; color: var(--accent); text-decoration-thickness: 2px }
+.copy { min-height: 2.75rem; padding: 0 1rem; font: 500 .85rem var(--mono); color: var(--text); background: none; border: 1px solid var(--line-strong); border-radius: 10px; cursor: pointer; transition: border-color .2s }
+.copy:hover { border-color: color-mix(in oklab, var(--accent) 55%, transparent) }
+.copy-status { font: 500 .8rem var(--mono); color: var(--accent); min-height: 1.2em }
+.links { list-style: none; margin: 1.5rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: .6rem }
+.links a { display: inline-block; padding: .65rem 1rem; border: 1px solid var(--line-strong); border-radius: 10px; text-decoration: none; font-size: .95rem; transition: border-color .2s }
 .links a:hover { border-color: color-mix(in oklab, var(--accent) 55%, transparent) }
 .foot { display: flex; align-items: center; gap: .7rem; padding-block: 1.5rem 3rem; border-top: 1px solid var(--line); color: var(--muted) }
 .foot svg { width: 1.5rem; height: 1.5rem }
@@ -185,4 +209,14 @@ h2 { font-size: clamp(1.9rem, 5vw, 3rem); line-height: 1.05; letter-spacing: -.0
   html { scroll-behavior: auto }
   *, *::before, *::after { animation: none !important; transition: none !important }
   .logo .mk-l, .logo .mk-c { stroke-dashoffset: 0 }
+}
+
+@media print {
+  :root { color-scheme: light }
+  body::before, body::after, .bar, .hud, .copy, .copy-status, .menu { display: none !important }
+  body { background: #fff; color: #000; font-size: 11pt }
+  .panel { box-shadow: none; backdrop-filter: none; break-inside: avoid; background: none; border-color: #bbb; animation: none !important; opacity: 1 !important; transform: none !important }
+  section { padding-block: 1.2rem }
+  a { color: #000; text-decoration: underline }
+  .muted, .intro, .job p, .tile p, .note p { color: #222 }
 }
