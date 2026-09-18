@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lucas Caixeta — Front-end Developer &amp; Tech Lead</title>
-  <meta name="description" content="Lucas Caixeta is a front-end developer and tech lead based in Lisbon, building fast, accessible web products with React and TypeScript, and the teams behind them.">
+  <title>Lucas Caixeta | Technical Lead &amp; Front-end Engineer</title>
+  <meta name="description" content="Lucas Caixeta is a technical lead and front-end engineer in Lisbon. 13 years building React and TypeScript products, design systems and micro-frontends.">
   <meta name="author" content="Lucas Caixeta">
-  <meta name="color-scheme" content="light dark">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#06080b">
   <link rel="canonical" href="https://lucascaixeta.com/">
   <link rel="alternate" hreflang="en" href="https://lucascaixeta.com/">
   <link rel="alternate" hreflang="pt" href="https://lucascaixeta.com/pt/">
@@ -16,16 +17,18 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="pt_BR">
   <meta property="og:url" content="https://lucascaixeta.com/">
-  <meta property="og:title" content="Lucas Caixeta — Front-end Developer & Tech Lead">
-  <meta property="og:description" content="Fast, accessible web products with React and TypeScript — and the teams behind them.">
+  <meta property="og:title" content="Lucas Caixeta | Technical Lead &amp; Front-end Engineer">
+  <meta property="og:description" content="13 years of React and TypeScript, design systems and micro-frontends. Technical lead based in Lisbon.">
   <meta property="og:image" content="https://lucascaixeta.com/images/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:creator" content="@Lucas_Caixeta">
 
-  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="images/favicon.png" type="image/png" sizes="256x256">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="style.css">
 
   <script type="application/ld+json">
@@ -33,7 +36,10 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Lucas Caixeta",
-    "jobTitle": "Front-end Developer & Tech Lead",
+    "jobTitle": "Technical Lead",
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "União Pioneira da Integração Social (UPIS)" },
+    "knowsLanguage": ["en", "pt"],
+    "knowsAbout": ["React", "TypeScript", "Micro-frontends", "Design systems", "Web performance", "Accessibility"],
     "url": "https://lucascaixeta.com/",
     "email": "mailto:contato@lucascaixeta.com",
     "address": { "@type": "PostalAddress", "addressLocality": "Lisbon", "addressCountry": "PT" },
@@ -49,75 +55,185 @@
   <a class="skip" href="#main">Skip to content</a>
 
   <header class="bar">
-    <a class="logo" href="#top" aria-label="Lucas Caixeta, home">lc<span>.</span></a>
-    <nav aria-label="Primary">
-      <a href="#work">What I do</a>
-      <a href="#stack">Stack</a>
-      <a class="pill" href="#contact">Contact</a>
-      <a class="lang" href="pt/" hreflang="pt" lang="pt" aria-label="Ver em português">PT</a>
-    </nav>
+    <div class="wrap bar-in">
+      <a class="logo" href="#top" aria-label="Lucas Caixeta">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><rect class="mk-tile" x=".5" y=".5" width="47" height="47" rx="13"/><path class="mk-l" pathLength="1" d="M10 14V34H16"/><path class="mk-c" pathLength="1" d="M37.7 16.6A10 10 0 1 0 37.7 31.4"/></svg>
+        <span>Lucas Caixeta</span>
+      </a>
+      <nav aria-label="Primary">
+        <a class="opt" href="#work">Work</a>
+        <a class="opt" href="#experience">Experience</a>
+        <a class="opt" href="#skills">Skills</a>
+        <a class="cta-nav" href="#contact">Contact</a>
+        <a class="lang" href="pt/" hreflang="pt" lang="pt" aria-label="Ver em português">PT</a>
+      </nav>
+    </div>
   </header>
 
   <main id="main">
     <section class="hero wrap" id="top">
-      <p class="eyebrow">Lisbon, Portugal</p>
-      <h1>Lucas Caixeta</h1>
-      <p class="lead">Front-end developer and tech lead. I build fast, accessible web products — and the teams that keep shipping them.</p>
+      <svg class="hud" viewBox="0 0 400 400" aria-hidden="true">
+        <circle class="r4" cx="200" cy="200" r="184"/>
+        <circle class="r1" cx="200" cy="200" r="168"/>
+        <circle class="r2" cx="200" cy="200" r="136"/>
+        <circle class="r3" cx="200" cy="200" r="100"/>
+        <g transform="translate(140 138) scale(2.5)"><path class="mk-l" pathLength="1" d="M10 14V34H16"/><path class="mk-c" pathLength="1" d="M37.7 16.6A10 10 0 1 0 37.7 31.4"/></g>
+      </svg>
+      <p class="status"><i></i>Lisbon, Portugal · <time id="clock"></time></p>
+      <h1>Lucas <span>Caixeta</span></h1>
+      <p class="intro">I’m a technical lead and front-end engineer. For 13 years I’ve built products for the web, mostly with React and TypeScript. Today I lead the technical side of a large consumer platform, and I care about design systems, clear architecture and helping teams do their best work.</p>
       <p class="cta">
         <a class="btn primary" href="mailto:contato@lucascaixeta.com">Get in touch</a>
         <a class="btn" href="https://www.linkedin.com/in/lucascaixeta" rel="noopener">LinkedIn</a>
         <a class="btn" href="https://github.com/LucasCaixeta" rel="noopener">GitHub</a>
       </p>
+      <dl class="facts">
+        <div class="panel"><dt>13<b>+</b></dt><dd>years building software</dd></div>
+        <div class="panel"><dt>10<b>+</b></dt><dd>years with React</dd></div>
+        <div class="panel"><dt>3</dt><dd>design systems built with teams</dd></div>
+      </dl>
     </section>
 
     <section class="wrap" id="work" aria-labelledby="work-h">
-      <h2 id="work-h"><span>01</span> What I do</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>Front-end engineering</h3>
-          <p>Component-driven interfaces in React, TypeScript and Next.js. Performance, accessibility and design systems are treated as product features, not clean-up work.</p>
+      <div class="head"><span>01</span><h2 id="work-h">What I do</h2></div>
+      <div class="grid3">
+        <article class="panel tile">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 6.6L21 12l-6.6 2.4L12 21l-2.4-6.6L3 12l6.6-2.4z"/></svg>
+          <h3>Leading teams</h3><p>I set technical direction and help teams deliver across markets. That means architecture decisions, connecting the work of different teams, and planning migrations away from legacy services.</p>
         </article>
-        <article class="card">
-          <h3>Technical leadership</h3>
-          <p>Architecture decisions, code review culture, mentoring and clear technical direction, so a team ships steadily and stays healthy while doing it.</p>
+        <article class="panel tile">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg>
+          <h3>Building platforms</h3><p>Day to day I work with React, TypeScript and NestJS in a micro-frontend monorepo. The flows I build cover registration, identity verification and OTP for field teams.</p>
         </article>
-        <article class="card">
-          <h3>Quality &amp; delivery</h3>
-          <p>Storybook, visual regression, automated tests and CI that make releases boring, in the best possible way.</p>
+        <article class="panel tile">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></svg>
+          <h3>Design systems and quality</h3><p>I’ve built component libraries with Storybook and Bit.dev, written tests with React Testing Library and worked with CI/CD at Cazoo, Tamanna and in my current role.</p>
         </article>
       </div>
     </section>
 
-    <!--
-      SELECTED WORK — add when ready. Copy one <article class="card"> per project into a
-      <section class="wrap" id="projects"> with a .cards grid: title, one-sentence outcome, stack, link.
-    -->
-
-    <section class="wrap" id="stack" aria-labelledby="stack-h">
-      <h2 id="stack-h"><span>02</span> Stack &amp; practice</h2>
-      <dl class="stack">
-        <div><dt>Languages</dt><dd><ul><li>TypeScript</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul></dd></div>
-        <div><dt>Frameworks &amp; libraries</dt><dd><ul><li>React</li><li>Next.js</li><li>Redux</li><li>React Query</li></ul></dd></div>
-        <div><dt>Tooling &amp; quality</dt><dd><ul><li>Vite</li><li>Storybook</li><li>Visual regression</li><li>CI/CD</li></ul></dd></div>
-        <div><dt>Practice</dt><dd><ul><li>Accessibility (WCAG)</li><li>Web performance</li><li>Design systems</li><li>Mentoring</li></ul></dd></div>
-      </dl>
+    <section class="wrap" id="experience" aria-labelledby="exp-h">
+      <div class="head"><span>02</span><h2 id="exp-h">Experience</h2></div>
+      <ol class="tl">
+        <li class="now">
+          <article class="panel job">
+            <p class="when">2026 to now</p>
+            <h3>Technical Lead</h3>
+            <p class="org">Global consumer-goods company</p>
+            <p>I lead the technical direction and delivery of a business-to-consumer platform used by field teams for the US market. I own integration between teams in a micro-frontend monorepo and the migration of legacy services, working with product, QA and integration teams around the world.</p>
+            <ul class="chips"><li>React</li><li>TypeScript</li><li>NestJS</li><li>Micro-frontends</li></ul>
+          </article>
+        </li>
+        <li>
+          <article class="panel job">
+            <p class="when">2022 to 2026</p>
+            <h3>Senior Software Engineer, Frontend</h3>
+            <p class="org">Global consumer-goods company</p>
+            <p>I joined the age verification team, building identity verification flows and contributing to a shared component library documented in Storybook. I then moved to the global platform, where I built Consumer 360, the tool field coaches use to manage consumer profiles, registration and OTP verification, and helped move the platform off legacy services.</p>
+            <ul class="chips"><li>React</li><li>TypeScript</li><li>Storybook</li><li>NestJS</li></ul>
+          </article>
+        </li>
+        <li>
+          <article class="panel job">
+            <p class="when">2022</p>
+            <h3>Software Engineer</h3>
+            <p class="org">Cazoo</p>
+            <p>I built components for the design system used across Cazoo’s internal tools, working with designers, testers and product managers. Test-driven development with React Testing Library, plus Storybook and CI/CD.</p>
+            <ul class="chips"><li>React</li><li>TypeScript</li><li>Styled Components</li></ul>
+          </article>
+        </li>
+        <li>
+          <article class="panel job">
+            <p class="when">2021 to 2022</p>
+            <h3>Front-end Developer</h3>
+            <p class="org">Tamanna.com</p>
+            <p>I worked on the back-office where brands manage the products sold on the main site, and helped build the team’s design system from scratch with Storybook and Bit.dev.</p>
+            <ul class="chips"><li>Next.js</li><li>React</li><li>TypeScript</li><li>PWA</li><li>Docker</li></ul>
+          </article>
+        </li>
+        <li>
+          <article class="panel job">
+            <p class="when">2019 to 2021</p>
+            <h3>Front-end Developer</h3>
+            <p class="org">Sbanken</p>
+            <p>I built and maintained solutions for the bank’s Business area, alongside designers, testers and other developers.</p>
+            <ul class="chips"><li>React</li><li>Redux</li></ul>
+          </article>
+        </li>
+        <li>
+          <article class="panel job">
+            <p class="when">2016 to 2019</p>
+            <h3>Front-end Developer</h3>
+            <p class="org">OLX Group</p>
+            <p>I was one of the engineers responsible for the front end of Tradus Pro, the business tool for a global marketplace of used heavy machinery. I was also the team’s Coding Dojo evangelist.</p>
+            <ul class="chips"><li>React</li><li>Redux</li><li>Redux Observable</li><li>ES6</li></ul>
+          </article>
+        </li>
+        <li>
+          <article class="panel job">
+            <p class="when">2013 to 2017</p>
+            <h3>Earlier roles</h3>
+            <p class="org">Integer Consulting, Instituto de Pesquisas Eldorado</p>
+            <p>Front-end consulting with React, Redux and Angular.js in Lisbon. Before that, at Eldorado in Brasília, JavaScript and HTML5 projects with Angular.js and Polymer, and Android apps in Java.</p>
+          </article>
+        </li>
+      </ol>
     </section>
 
-    <section class="wrap contact" id="contact" aria-labelledby="contact-h">
-      <h2 id="contact-h"><span>03</span> Contact</h2>
-      <p class="lead">Have a product to build or a team to grow? Let’s talk.</p>
-      <a class="mail" href="mailto:contato@lucascaixeta.com">contato@lucascaixeta.com</a>
-      <ul class="links">
-        <li><a href="https://www.linkedin.com/in/lucascaixeta" rel="noopener">LinkedIn</a></li>
-        <li><a href="https://github.com/LucasCaixeta" rel="noopener">GitHub</a></li>
-        <li><a href="https://twitter.com/Lucas_Caixeta" rel="noopener">X / Twitter</a></li>
-      </ul>
+    <section class="wrap" id="skills" aria-labelledby="skills-h">
+      <div class="head"><span>03</span><h2 id="skills-h">Skills</h2></div>
+      <div class="grid2">
+        <div class="panel group"><h3>Languages</h3><ul class="chips"><li>TypeScript</li><li>JavaScript (ES6+)</li><li>HTML5</li><li>CSS3</li></ul></div>
+        <div class="panel group"><h3>Frameworks</h3><ul class="chips"><li>React</li><li>Next.js</li><li>Redux</li><li>Redux Observable</li><li>NestJS</li><li>Styled Components</li></ul></div>
+        <div class="panel group"><h3>Tooling</h3><ul class="chips"><li>Storybook</li><li>Bit.dev</li><li>React Testing Library</li><li>Figma</li><li>GitHub CI</li><li>GitLab CI</li><li>Docker</li></ul></div>
+        <div class="panel group"><h3>Practice</h3><ul class="chips"><li>Micro-frontends</li><li>Design systems</li><li>Technical leadership</li><li>Mentoring and onboarding</li><li>Coding Dojo</li></ul></div>
+      </div>
+    </section>
+
+    <section class="wrap" id="beyond" aria-labelledby="beyond-h">
+      <div class="head"><span>04</span><h2 id="beyond-h">Beyond the code</h2></div>
+      <div class="grid2">
+        <div class="panel note"><h3>Community</h3><p>Coding Dojo evangelist at OLX Group. I wrote about it on Medium: <a href="https://medium.com/@lucascaixeta/coding-dojo-4e0b1ea69735" rel="noopener">Coding Dojo</a>.</p></div>
+        <div class="panel note"><h3>Learning</h3><p>Anthropic: Claude Code in Action, AI Fluency, Claude 101 (2026). IBM: Developing Front End Apps with React (2024). Testing React with Jest and RTL (2022).</p></div>
+        <div class="panel note"><h3>Education</h3><p>BSc in Information Systems, UPIS, Brasília (2013).</p></div>
+        <div class="panel note"><h3>Languages</h3><p>English (full professional), Portuguese (native).</p></div>
+      </div>
+    </section>
+
+    <section class="wrap" id="contact" aria-labelledby="contact-h">
+      <div class="head"><span>05</span><h2 id="contact-h">Contact</h2></div>
+      <div class="panel contact">
+        <p class="intro">Have something to build, or a team to grow? I’d like to hear about it.</p>
+        <a class="mail" href="mailto:contato@lucascaixeta.com">contato@lucascaixeta.com</a>
+        <ul class="links">
+          <li><a href="https://www.linkedin.com/in/lucascaixeta" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/LucasCaixeta" rel="noopener">GitHub</a></li>
+          <li><a href="https://twitter.com/Lucas_Caixeta" rel="noopener">X / Twitter</a></li>
+        </ul>
+      </div>
     </section>
   </main>
 
   <footer class="wrap foot">
+    <svg viewBox="0 0 48 48" aria-hidden="true"><path class="mk-l" pathLength="1" d="M10 14V34H16"/><path class="mk-c" pathLength="1" d="M37.7 16.6A10 10 0 1 0 37.7 31.4"/></svg>
     <small>© <span id="y">2026</span> Lucas Caixeta</small>
   </footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+  <script>
+  (() => {
+    const $ = s => document.querySelector(s);
+    $('#y').textContent = new Date().getFullYear();
+    const clock = $('#clock');
+    const tick = () => { clock.textContent = new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Lisbon' }).format(new Date()); };
+    tick(); setInterval(tick, 30000);
+    if (matchMedia('(hover: hover) and (pointer: fine)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const root = document.documentElement.style;
+      addEventListener('pointermove', e => {
+        root.setProperty('--px', e.clientX + 'px'); root.setProperty('--py', e.clientY + 'px');
+        const p = e.target.closest && e.target.closest('.panel');
+        if (p) { const r = p.getBoundingClientRect(); p.style.setProperty('--cx', e.clientX - r.left + 'px'); p.style.setProperty('--cy', e.clientY - r.top + 'px'); }
+      }, { passive: true });
+    }
+  })();
+  </script>
 </body>
 </html>

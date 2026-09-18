@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lucas Caixeta — Desenvolvedor Front-end &amp; Tech Lead</title>
-  <meta name="description" content="Lucas Caixeta é desenvolvedor front-end e tech lead em Lisboa. Constrói produtos web rápidos e acessíveis com React e TypeScript — e as equipes por trás deles.">
+  <title>Lucas Caixeta | Technical Lead e Engenheiro Front-end</title>
+  <meta name="description" content="Lucas Caixeta é technical lead e engenheiro front-end em Lisboa. 13 anos construindo produtos em React e TypeScript, design systems e micro-frontends.">
   <meta name="author" content="Lucas Caixeta">
-  <meta name="color-scheme" content="light dark">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#06080b">
   <link rel="canonical" href="https://lucascaixeta.com/pt/">
   <link rel="alternate" hreflang="en" href="https://lucascaixeta.com/">
   <link rel="alternate" hreflang="pt" href="https://lucascaixeta.com/pt/">
@@ -16,16 +17,18 @@
   <meta property="og:locale" content="pt_BR">
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:url" content="https://lucascaixeta.com/pt/">
-  <meta property="og:title" content="Lucas Caixeta — Desenvolvedor Front-end & Tech Lead">
-  <meta property="og:description" content="Produtos web rápidos e acessíveis com React e TypeScript — e as equipes por trás deles.">
+  <meta property="og:title" content="Lucas Caixeta | Technical Lead e Engenheiro Front-end">
+  <meta property="og:description" content="13 anos de React e TypeScript, design systems e micro-frontends. Technical lead em Lisboa.">
   <meta property="og:image" content="https://lucascaixeta.com/images/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:creator" content="@Lucas_Caixeta">
 
-  <link rel="icon" href="../images/favicon.png" type="image/png">
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../images/favicon.png" type="image/png" sizes="256x256">
+  <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap">
   <link rel="stylesheet" href="../style.css">
 
   <script type="application/ld+json">
@@ -33,10 +36,13 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Lucas Caixeta",
-    "jobTitle": "Desenvolvedor Front-end & Tech Lead",
+    "jobTitle": "Technical Lead",
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "União Pioneira da Integração Social (UPIS)" },
+    "knowsLanguage": ["en", "pt"],
+    "knowsAbout": ["React", "TypeScript", "Micro-frontends", "Design systems", "Performance web", "Acessibilidade"],
     "url": "https://lucascaixeta.com/pt/",
     "email": "mailto:contato@lucascaixeta.com",
-    "address": { "@type": "PostalAddress", "addressLocality": "Lisbon", "addressCountry": "PT" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Lisboa", "addressCountry": "PT" },
     "sameAs": [
       "https://www.linkedin.com/in/lucascaixeta",
       "https://github.com/LucasCaixeta",
@@ -49,75 +55,185 @@
   <a class="skip" href="#main">Ir para o conteúdo</a>
 
   <header class="bar">
-    <a class="logo" href="#top" aria-label="Lucas Caixeta, início">lc<span>.</span></a>
-    <nav aria-label="Principal">
-      <a href="#work">O que faço</a>
-      <a href="#stack">Stack</a>
-      <a class="pill" href="#contact">Contato</a>
-      <a class="lang" href="../" hreflang="en" lang="en" aria-label="View in English">EN</a>
-    </nav>
+    <div class="wrap bar-in">
+      <a class="logo" href="#top" aria-label="Lucas Caixeta">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><rect class="mk-tile" x=".5" y=".5" width="47" height="47" rx="13"/><path class="mk-l" pathLength="1" d="M10 14V34H16"/><path class="mk-c" pathLength="1" d="M37.7 16.6A10 10 0 1 0 37.7 31.4"/></svg>
+        <span>Lucas Caixeta</span>
+      </a>
+      <nav aria-label="Principal">
+        <a class="opt" href="#work">Trabalho</a>
+        <a class="opt" href="#experience">Experiência</a>
+        <a class="opt" href="#skills">Skills</a>
+        <a class="cta-nav" href="#contact">Contato</a>
+        <a class="lang" href="../" hreflang="en" lang="en" aria-label="View in English">EN</a>
+      </nav>
+    </div>
   </header>
 
   <main id="main">
     <section class="hero wrap" id="top">
-      <p class="eyebrow">Lisboa, Portugal</p>
-      <h1>Lucas Caixeta</h1>
-      <p class="lead">Desenvolvedor front-end e tech lead. Construo produtos web rápidos e acessíveis — e as equipes que continuam entregando.</p>
+      <svg class="hud" viewBox="0 0 400 400" aria-hidden="true">
+        <circle class="r4" cx="200" cy="200" r="184"/>
+        <circle class="r1" cx="200" cy="200" r="168"/>
+        <circle class="r2" cx="200" cy="200" r="136"/>
+        <circle class="r3" cx="200" cy="200" r="100"/>
+        <g transform="translate(140 138) scale(2.5)"><path class="mk-l" pathLength="1" d="M10 14V34H16"/><path class="mk-c" pathLength="1" d="M37.7 16.6A10 10 0 1 0 37.7 31.4"/></g>
+      </svg>
+      <p class="status"><i></i>Lisboa, Portugal · <time id="clock"></time></p>
+      <h1>Lucas <span>Caixeta</span></h1>
+      <p class="intro">Sou technical lead e engenheiro front-end. Há 13 anos construo produtos para a web, principalmente com React e TypeScript. Hoje lidero a parte técnica de uma grande plataforma de consumo, e me importo com design systems, arquitetura clara e com ajudar times a fazerem seu melhor trabalho.</p>
       <p class="cta">
         <a class="btn primary" href="mailto:contato@lucascaixeta.com">Fale comigo</a>
         <a class="btn" href="https://www.linkedin.com/in/lucascaixeta" rel="noopener">LinkedIn</a>
         <a class="btn" href="https://github.com/LucasCaixeta" rel="noopener">GitHub</a>
       </p>
+      <dl class="facts">
+        <div class="panel"><dt>13<b>+</b></dt><dd>anos construindo software</dd></div>
+        <div class="panel"><dt>10<b>+</b></dt><dd>anos com React</dd></div>
+        <div class="panel"><dt>3</dt><dd>design systems construídos com times</dd></div>
+      </dl>
     </section>
 
     <section class="wrap" id="work" aria-labelledby="work-h">
-      <h2 id="work-h"><span>01</span> O que faço</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>Engenharia front-end</h3>
-          <p>Interfaces orientadas a componentes com React, TypeScript e Next.js. Performance, acessibilidade e design systems tratados como funcionalidades do produto, não como faxina.</p>
+      <div class="head"><span>01</span><h2 id="work-h">O que faço</h2></div>
+      <div class="grid3">
+        <article class="panel tile">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 6.6L21 12l-6.6 2.4L12 21l-2.4-6.6L3 12l6.6-2.4z"/></svg>
+          <h3>Liderar times</h3><p>Defino a direção técnica e ajudo os times a entregar em vários mercados. Isso envolve decisões de arquitetura, conectar o trabalho de times diferentes e planejar a saída de serviços legados.</p>
         </article>
-        <article class="card">
-          <h3>Liderança técnica</h3>
-          <p>Decisões de arquitetura, cultura de code review, mentoria e direção técnica clara, para que a equipe entregue com constância e continue saudável.</p>
+        <article class="panel tile">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg>
+          <h3>Construir plataformas</h3><p>No dia a dia trabalho com React, TypeScript e NestJS em um monorepo de micro-frontends. Os fluxos que construo cobrem cadastro, verificação de identidade e OTP para equipes de campo.</p>
         </article>
-        <article class="card">
-          <h3>Qualidade &amp; entrega</h3>
-          <p>Storybook, regressão visual, testes automatizados e CI que tornam os releases entediantes, no melhor sentido possível.</p>
+        <article class="panel tile">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></svg>
+          <h3>Design systems e qualidade</h3><p>Construí bibliotecas de componentes com Storybook e Bit.dev, escrevi testes com React Testing Library e trabalhei com CI/CD na Cazoo, na Tamanna e na função atual.</p>
         </article>
       </div>
     </section>
 
-    <!--
-      PROJETOS — adicionar quando estiver pronto. Um <article class="card"> por projeto numa
-      <section class="wrap" id="projects"> com grid .cards: título, resultado em uma frase, stack, link.
-    -->
-
-    <section class="wrap" id="stack" aria-labelledby="stack-h">
-      <h2 id="stack-h"><span>02</span> Stack &amp; prática</h2>
-      <dl class="stack">
-        <div><dt>Linguagens</dt><dd><ul><li>TypeScript</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul></dd></div>
-        <div><dt>Frameworks &amp; bibliotecas</dt><dd><ul><li>React</li><li>Next.js</li><li>Redux</li><li>React Query</li></ul></dd></div>
-        <div><dt>Ferramentas &amp; qualidade</dt><dd><ul><li>Vite</li><li>Storybook</li><li>Regressão visual</li><li>CI/CD</li></ul></dd></div>
-        <div><dt>Prática</dt><dd><ul><li>Acessibilidade (WCAG)</li><li>Performance web</li><li>Design systems</li><li>Mentoria</li></ul></dd></div>
-      </dl>
+    <section class="wrap" id="experience" aria-labelledby="exp-h">
+      <div class="head"><span>02</span><h2 id="exp-h">Experiência</h2></div>
+      <ol class="tl">
+        <li class="now">
+          <article class="panel job">
+            <p class="when">2026 até hoje</p>
+            <h3>Technical Lead</h3>
+            <p class="org">Multinacional de bens de consumo</p>
+            <p>Lidero a direção técnica e a entrega de uma plataforma B2C usada por equipes de campo no mercado dos EUA. Respondo pela integração entre times em um monorepo de micro-frontends e pela migração de serviços legados, trabalhando com times de produto, QA e integração do mundo todo.</p>
+            <ul class="chips"><li>React</li><li>TypeScript</li><li>NestJS</li><li>Micro-frontends</li></ul>
+          </article>
+        </li>
+        <li>
+          <article class="panel job">
+            <p class="when">2022 a 2026</p>
+            <h3>Senior Software Engineer, Frontend</h3>
+            <p class="org">Multinacional de bens de consumo</p>
+            <p>Entrei no time de verificação de idade, construindo fluxos de verificação de identidade e contribuindo para uma biblioteca de componentes compartilhada, documentada em Storybook. Depois fui para a plataforma global, onde construí o Consumer 360, a ferramenta que os field coaches usam para gerir perfis de consumidores, cadastro e verificação por OTP, e ajudei a tirar a plataforma dos serviços legados.</p>
+            <ul class="chips"><li>React</li><li>TypeScript</li><li>Storybook</li><li>NestJS</li></ul>
+          </article>
+        </li>
+        <li>
+          <article class="panel job">
+            <p class="when">2022</p>
+            <h3>Software Engineer</h3>
+            <p class="org">Cazoo</p>
+            <p>Construí componentes do design system usado em todas as ferramentas internas da Cazoo, trabalhando com designers, testers e product managers. Desenvolvimento orientado a testes com React Testing Library, além de Storybook e CI/CD.</p>
+            <ul class="chips"><li>React</li><li>TypeScript</li><li>Styled Components</li></ul>
+          </article>
+        </li>
+        <li>
+          <article class="panel job">
+            <p class="when">2021 a 2022</p>
+            <h3>Front-end Developer</h3>
+            <p class="org">Tamanna.com</p>
+            <p>Trabalhei no back-office onde as marcas gerem os produtos vendidos no site principal, e ajudei a construir do zero o design system do time com Storybook e Bit.dev.</p>
+            <ul class="chips"><li>Next.js</li><li>React</li><li>TypeScript</li><li>PWA</li><li>Docker</li></ul>
+          </article>
+        </li>
+        <li>
+          <article class="panel job">
+            <p class="when">2019 a 2021</p>
+            <h3>Front-end Developer</h3>
+            <p class="org">Sbanken</p>
+            <p>Construí e mantive soluções da área Business do banco, ao lado de designers, testers e outros desenvolvedores.</p>
+            <ul class="chips"><li>React</li><li>Redux</li></ul>
+          </article>
+        </li>
+        <li>
+          <article class="panel job">
+            <p class="when">2016 a 2019</p>
+            <h3>Front-end Developer</h3>
+            <p class="org">OLX Group</p>
+            <p>Fui um dos engenheiros responsáveis pelo front-end do Tradus Pro, a ferramenta de negócios de um marketplace global de máquinas pesadas usadas. Também fui o evangelista de Coding Dojo do time.</p>
+            <ul class="chips"><li>React</li><li>Redux</li><li>Redux Observable</li><li>ES6</li></ul>
+          </article>
+        </li>
+        <li>
+          <article class="panel job">
+            <p class="when">2013 a 2017</p>
+            <h3>Experiências anteriores</h3>
+            <p class="org">Integer Consulting, Instituto de Pesquisas Eldorado</p>
+            <p>Consultoria front-end com React, Redux e Angular.js em Lisboa. Antes, no Eldorado, em Brasília, projetos em JavaScript e HTML5 com Angular.js e Polymer, e apps Android em Java.</p>
+          </article>
+        </li>
+      </ol>
     </section>
 
-    <section class="wrap contact" id="contact" aria-labelledby="contact-h">
-      <h2 id="contact-h"><span>03</span> Contato</h2>
-      <p class="lead">Tem um produto para construir ou uma equipe para crescer? Vamos conversar.</p>
-      <a class="mail" href="mailto:contato@lucascaixeta.com">contato@lucascaixeta.com</a>
-      <ul class="links">
-        <li><a href="https://www.linkedin.com/in/lucascaixeta" rel="noopener">LinkedIn</a></li>
-        <li><a href="https://github.com/LucasCaixeta" rel="noopener">GitHub</a></li>
-        <li><a href="https://twitter.com/Lucas_Caixeta" rel="noopener">X / Twitter</a></li>
-      </ul>
+    <section class="wrap" id="skills" aria-labelledby="skills-h">
+      <div class="head"><span>03</span><h2 id="skills-h">Skills</h2></div>
+      <div class="grid2">
+        <div class="panel group"><h3>Linguagens</h3><ul class="chips"><li>TypeScript</li><li>JavaScript (ES6+)</li><li>HTML5</li><li>CSS3</li></ul></div>
+        <div class="panel group"><h3>Frameworks</h3><ul class="chips"><li>React</li><li>Next.js</li><li>Redux</li><li>Redux Observable</li><li>NestJS</li><li>Styled Components</li></ul></div>
+        <div class="panel group"><h3>Ferramentas</h3><ul class="chips"><li>Storybook</li><li>Bit.dev</li><li>React Testing Library</li><li>Figma</li><li>GitHub CI</li><li>GitLab CI</li><li>Docker</li></ul></div>
+        <div class="panel group"><h3>Prática</h3><ul class="chips"><li>Micro-frontends</li><li>Design systems</li><li>Liderança técnica</li><li>Mentoria e onboarding</li><li>Coding Dojo</li></ul></div>
+      </div>
+    </section>
+
+    <section class="wrap" id="beyond" aria-labelledby="beyond-h">
+      <div class="head"><span>04</span><h2 id="beyond-h">Além do código</h2></div>
+      <div class="grid2">
+        <div class="panel note"><h3>Comunidade</h3><p>Evangelista de Coding Dojo na OLX Group. Escrevi sobre isso no Medium: <a href="https://medium.com/@lucascaixeta/coding-dojo-4e0b1ea69735" rel="noopener">Coding Dojo</a>.</p></div>
+        <div class="panel note"><h3>Aprendizado</h3><p>Anthropic: Claude Code in Action, AI Fluency, Claude 101 (2026). IBM: Developing Front End Apps with React (2024). Testing React with Jest and RTL (2022).</p></div>
+        <div class="panel note"><h3>Formação</h3><p>Bacharel em Sistemas de Informação, UPIS, Brasília (2013).</p></div>
+        <div class="panel note"><h3>Idiomas</h3><p>Inglês (profissional completo), português (nativo).</p></div>
+      </div>
+    </section>
+
+    <section class="wrap" id="contact" aria-labelledby="contact-h">
+      <div class="head"><span>05</span><h2 id="contact-h">Contato</h2></div>
+      <div class="panel contact">
+        <p class="intro">Tem algo para construir, ou um time para crescer? Vou gostar de ouvir.</p>
+        <a class="mail" href="mailto:contato@lucascaixeta.com">contato@lucascaixeta.com</a>
+        <ul class="links">
+          <li><a href="https://www.linkedin.com/in/lucascaixeta" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/LucasCaixeta" rel="noopener">GitHub</a></li>
+          <li><a href="https://twitter.com/Lucas_Caixeta" rel="noopener">X / Twitter</a></li>
+        </ul>
+      </div>
     </section>
   </main>
 
   <footer class="wrap foot">
+    <svg viewBox="0 0 48 48" aria-hidden="true"><path class="mk-l" pathLength="1" d="M10 14V34H16"/><path class="mk-c" pathLength="1" d="M37.7 16.6A10 10 0 1 0 37.7 31.4"/></svg>
     <small>© <span id="y">2026</span> Lucas Caixeta</small>
   </footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+  <script>
+  (() => {
+    const $ = s => document.querySelector(s);
+    $('#y').textContent = new Date().getFullYear();
+    const clock = $('#clock');
+    const tick = () => { clock.textContent = new Intl.DateTimeFormat('pt-PT', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Lisbon' }).format(new Date()); };
+    tick(); setInterval(tick, 30000);
+    if (matchMedia('(hover: hover) and (pointer: fine)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const root = document.documentElement.style;
+      addEventListener('pointermove', e => {
+        root.setProperty('--px', e.clientX + 'px'); root.setProperty('--py', e.clientY + 'px');
+        const p = e.target.closest && e.target.closest('.panel');
+        if (p) { const r = p.getBoundingClientRect(); p.style.setProperty('--cx', e.clientX - r.left + 'px'); p.style.setProperty('--cy', e.clientY - r.top + 'px'); }
+      }, { passive: true });
+    }
+  })();
+  </script>
 </body>
 </html>
