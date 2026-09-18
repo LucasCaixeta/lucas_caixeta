@@ -78,7 +78,7 @@ section { padding-block: clamp(3.5rem, 8vw, 6rem) }
 @media (max-width: 25rem) { .logo span { display: none } }
 
 /* hero */
-.hero { padding-block: clamp(3.5rem, 11vw, 8rem) clamp(2.5rem, 6vw, 4rem) }
+.hero { padding-block: clamp(2rem, 5vw, 4rem) clamp(2.5rem, 6vw, 4rem) }
 .hud { position: absolute; z-index: -1; right: max(0px, calc(50% - 36rem)); top: 4.5rem; width: min(34rem, 60vw); aspect-ratio: 1; pointer-events: none; opacity: .9 }
 .hud circle { fill: none; stroke: color-mix(in oklab, var(--accent) 45%, transparent); transform-origin: 200px 200px }
 .hud .r1 { stroke-width: 1; stroke-dasharray: 1 9; animation: spin 90s linear infinite }
