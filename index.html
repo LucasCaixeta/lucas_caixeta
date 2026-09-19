@@ -42,7 +42,7 @@
     "knowsLanguage": ["en", "pt"],
     "knowsAbout": ["React", "TypeScript", "Micro-frontends", "Design systems", "Web performance", "Accessibility"],
     "url": "https://lucascaixeta.com/",
-    "email": "mailto:contato@lucascaixeta.com",
+    "email": "mailto:hello@lucascaixeta.com",
     "address": { "@type": "PostalAddress", "addressLocality": "Lisbon", "addressCountry": "PT" },
     "sameAs": [
       "https://www.linkedin.com/in/lucascaixeta",
@@ -89,11 +89,11 @@
         <circle class="r3" cx="200" cy="200" r="100"/>
         <g transform="translate(140 138) scale(2.5)"><path class="mk-l" pathLength="1" d="M10 14V34H16"/><path class="mk-c" pathLength="1" d="M37.7 16.6A10 10 0 1 0 37.7 31.4"/></g>
       </svg>
-      <p class="status"><i aria-hidden="true"></i>Lisbon, Portugal · <time id="clock"></time></p>
+      <p class="status">Lisbon, Portugal · <time id="clock"></time></p>
       <h1>Lucas <span>Caixeta</span></h1>
       <p class="intro">I’m a technical lead and front-end engineer. For 13 years I’ve built products for the web, mostly with React and TypeScript. Today I lead the technical side of a large consumer platform, and I care about design systems, clear architecture and helping teams do their best work.</p>
       <p class="cta">
-        <a class="btn primary" href="mailto:contato@lucascaixeta.com">Get in touch</a>
+        <a class="btn" href="mailto:hello@lucascaixeta.com">Email</a>
         <a class="btn" href="https://www.linkedin.com/in/lucascaixeta" rel="noopener">LinkedIn</a>
         <a class="btn" href="https://github.com/LucasCaixeta" rel="noopener">GitHub</a>
       </p>
@@ -205,10 +205,10 @@
       <div class="head"><h2 id="contact-h">Contact</h2></div>
       <div class="panel contact">
         <div class="contact-main">
-          <p class="intro">Have something to build, or a team to grow? <span>I’d like to hear about it.</span></p>
+          <p class="intro">Email is the best way to reach me.</p>
           <div class="mailbox">
             <svg class="mail-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 8l8 5.5L20 8"/></svg>
-            <a class="mail" href="mailto:contato@lucascaixeta.com">contato@<wbr>lucascaixeta.com</a>
+            <a class="mail" href="mailto:hello@lucascaixeta.com">hello@<wbr>lucascaixeta.com</a>
             <button class="copy" type="button" aria-label="Copy email address"><svg class="i-copy" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2.5"/><path d="M5 15V6.5A2.5 2.5 0 0 1 7.5 4H15"/></svg><svg class="i-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span class="lbl">Copy</span></button>
             <span class="copy-status" role="status" aria-live="polite"></span>
           </div>
@@ -268,7 +268,7 @@
 
     const copyBtn = $('.copy'), copyLbl = $('.copy .lbl'), copyStatus = $('.copy-status');
     copyBtn.addEventListener('click', async () => {
-      const text = 'contato@lucascaixeta.com';
+      const text = 'hello@lucascaixeta.com';
       let ok = true;
       try { await navigator.clipboard.writeText(text); } catch (e) {
         const ta = document.createElement('textarea');
