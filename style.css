@@ -240,7 +240,7 @@ h2 { font-size: clamp(1.9rem, 5vw, 3rem); line-height: 1.05; letter-spacing: -.0
 
   /* the timeline fills in as the middle of the screen moves through the career, and each stop lights up when reached */
   .tl { position: relative; view-timeline: --tl block }
-  .tl::before { content: ""; position: absolute; left: -2px; top: 0; bottom: 0; width: 3px; border-radius: 2px; background: var(--accent); transform-origin: top;
+  .tl::before { content: ""; position: absolute; left: -1px; top: 0; bottom: 0; width: 1.5px; border-radius: 1px; background: color-mix(in oklab, var(--accent) 75%, transparent); transform-origin: top;
     animation: fill linear both; animation-timeline: --tl; animation-range: cover 50vh cover calc(100% - 50vh) }
   /* as the line arrives, the stop swells with a halo, then settles lit; its date turns accent */
   .tl > li:not(.now)::before { animation: reach linear both; animation-timeline: view(); animation-range: cover calc(50vh - 40px) cover calc(50vh + 60px) }
